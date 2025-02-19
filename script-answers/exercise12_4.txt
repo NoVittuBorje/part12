@@ -1,0 +1,11 @@
+Script started on 2025-02-19 13:10:30+02:00 [TERM="xterm-256color" TTY="/dev/pts/9" COLUMNS="219" LINES="13"]
+docker start vigorous_feynman -i
+apt-get -y install curl
+curl -sL https://deb.nodesource.com/setup_20.x | bash
+apt install -y nodejs
+8
+18
+node /usr/src/app/index.js
+exit
+exit
+Script done on 2025-02-19 13:12:12+02:00 [COMMAND_EXIT_CODE="0"]
