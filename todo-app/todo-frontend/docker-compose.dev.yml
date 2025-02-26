@@ -1,0 +1,20 @@
+services:
+  app:
+    image: todo-front-dev
+    build:
+      context: . # The context will pick this directory as the "build context"
+      dockerfile: dev.Dockerfile # This will simply tell which dockerfile to read
+    volumes:
+      - ./:/usr/src/part12/todo-app/todo-frontend # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
+    ports:
+      - 5173:5173
+    container_name: todo-front-dev
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: reverse-proxy
+    depends_on:
+        - app

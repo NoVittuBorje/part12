@@ -6,12 +6,10 @@ const TodoForm = ({ createTodo }) => {
   const onChange = ({ target }) => {
     setText(target.value)
   }
-
   const handleSubmit = (e) => {
     e.preventDefault()
     createTodo({ text })
   }
-
   return (
     <form onSubmit={handleSubmit}>
       <input type="text" name="text" value={text} onChange={onChange} />
