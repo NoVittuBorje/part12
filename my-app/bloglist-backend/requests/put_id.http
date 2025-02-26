@@ -1,0 +1,9 @@
+PUT http://localhost:3003/api/blogs/66fd25534085b83757bf550a
+content-type: application/json:50-o36nl+uha12cojWpkZv4hkYVOtc
+
+{
+    "title": "Blogi testi6 put",
+    "author": "jere3",
+    "url":"testitesti.com/jerepblogi3",
+    "likes":1
+}
